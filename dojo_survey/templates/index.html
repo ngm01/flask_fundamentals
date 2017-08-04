@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo Survey Index</title>
+	<style type="text/css">
+		form{
+			display: flex;
+			flex-direction: column;
+			width: 400px;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<form action="/result" method="post">
+		<label for='your_name'>Your Name: </label>
+		<input type="text" name="your_name">
+		<label for="location">Dojo Location: </label>
+		<select name="location">
+		<option value="Washington D.C.">Washington, D.C.</option>
+		<option value="San Jose">San Jose</option>
+		<option value="Mars">Mars</option>
+		</select>
+		<label for="langauge">Favorite Language: </label>
+		<select name="language">
+		<option value='Python'>Python</option>
+		<option value='JavaScript'>JavaScript</option>
+		<option value='CSS'>CSS</option>
+		</select>
+		<label for="comment">Comment (optional):</label>
+		<textarea name="comment"></textarea>
+		<input type="submit" value="Button">
+		</form>
+	</div>
+</body>
+</html>
