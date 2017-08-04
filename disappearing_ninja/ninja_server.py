@@ -19,10 +19,12 @@ def routethis(color):
 		colors += [c]
 	print colors
 	if color not in colors:
-		return render_template('index.html', turtle="notapril.jpg")
+		msg = "That's not a turtle..."
+		return render_template('index.html', turtle="notapril.jpg", msg=msg)
 	else:
+		msg = tmnt[color].capitalize()
 		turtle = tmnt[color] + '.jpg'
-		return render_template('index.html', turtle=turtle)
+		return render_template('index.html', turtle=turtle, msg=msg)
 
 @app.errorhandler(404)
 def error(e):
