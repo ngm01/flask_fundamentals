@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+	<style type="text/css">
+		*{
+			margin: auto;
+			padding: 0px;
+		}
+
+		#main{
+		display: flex;
+		flex-direction: column;
+    	justify-content: center;
+    	width: 500px;
+    	height: 500px;
+		}
+
+		h1, p, form{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id='main'>
+	<h1>Counter</h1>
+	<p>{{session['count']}} times.</p>
+	<form action="/plustwo" method="post">
+		<button>Plus Two</button>
+	</form>
+	<form action="/reset" method="post">
+		<button>Reset</button>
+	</form>
+	</div>
+</body>
+</html>
