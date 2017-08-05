@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, session
 import random, time
 app = Flask(__name__)
-app.secret_key = "ninjasession['gold']"
+app.secret_key = "ninjagold"
 
 
 
