@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo Survey Index</title>
+	<style type="text/css">
+		body{
+			border: 2px solid black;
+		}
+
+		th{
+			text-align: left;
+			padding-right: 25px;
+		}
+	</style>
+</head>
+<body>
+<h2>Submitted Info</h2>
+<div id="main">
+<table>
+<tr><th>Name: </th><td>{{ session['your_name'] }}</td></tr>
+<tr><th>Location: </th><td>{{ session['location'] }}</td>
+<tr><th>Favorite Language: </th><td>{{ session['language'] }}</td><tr><th>Comments: </th><td>{{ session['comment'] }}</td>
+</tr>
+</table>
+</div>
+<a href="/reset">Go Back</a>
+</body>
+</html>
