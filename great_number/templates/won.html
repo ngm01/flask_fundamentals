@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Great Number Game</title>
+	<style type="text/css">
+		*{
+			margin: auto;
+			padding: 0px;
+		}
+
+		#main{
+			display: flex;
+			/*width: 500px;*/
+			height: 500px;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		h1,h3,form,.box{
+			margin-bottom: 5px;
+			margin-top: 5px; 
+		}
+
+		form{
+			display: flex;
+			flex-direction: column;
+		}
+
+		input[type='submit']{
+			margin-top: 8px;
+		}
+
+		.box{
+			width: 200px;
+			height: 200px;
+			display: flex;
+			align-items: center;
+			margin-right: auto;
+			margin-left: auto;
+			color: white;
+			font-weight: bold;
+			font-size: 2em;
+			background-color: green;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="main">
+<h1>Congratulations!</h1>
+<h3>You guessed correctly!</h3>
+<h3>Want to play again?</h3>
+<div class='box'><p>You Won!</p></div>
+<form action="/reset" method="post">
+<input type="submit" value="RESET">
+</form>
+</div>
+</body>
+</html>
