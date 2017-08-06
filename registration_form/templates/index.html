@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<!-- Move CSS to file in static folder before you're done! -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<body>
+	<div id="wrapper">
+		<h1>Welcome!</h1>
+		<h2>Please provide registration information.</h2>
+		<form action="/register" method="post">
+
+			<table>
+			<tr>
+				<th><label for='email'>Email: </label></th>
+				<td><input class={{session['email'][0]}} type="text" name="email" value={{session['email'][1]}}></td>
+			</tr>
+			<tr>
+				<th><label for='first_name'>First Name: </label></th>
+				<td><input class={{session['first_name'][0]}} type="text" name="first_name" value={{session['first_name'][1]}}></td>
+			</tr>
+			<tr>
+				<th><label for='last_name'>Last Name: </label></th>
+				<td><input class={{session['last_name'][0]}} type="text" name="last_name" value={{session['last_name'][1]}}></td>
+			</tr>
+			<tr>
+				<th><label for='bdate'>Date of Birth: </label></th>
+				<td><input class={{session['bdate'][0]}} type="text" name="bdate" placeholder="MM/DD/YYYY" value={{session['bdate'][1]}}></td>
+			</tr>
+			<tr>
+				<th><label for='password'>Password: </label></th>
+				<td><input class={{session['password'][0]}} type="password" name="password" value={{session['password'][1]}}></td>
+			</tr>
+			<tr>
+				<th><label for='pass_conf'>Confirm Password: </label></th>
+				<td><input class={{session['pass_conf'][0]}} type="password" name="pass_conf" value={{session['pass_conf'][1]}}></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="Submit"></td>
+			</tr>
+			</table>
+		</form>
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					<div id={{mood}}>
+					{% for message in messages %}
+						<p>{{message}}</p>
+						{% if message == "Thank you for submitting your information." %}
+							<form action="/reset" method="post"><input type="submit" value="Continue"></form>
+						{% endif %}
+					{% endfor %}
+					</div>
+				{% endif %}
+			{% endwith %}
+	</div>
+</body>
+</body>
+</html>

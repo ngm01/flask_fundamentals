@@ -1,0 +1,27 @@
+		table{
+			text-align: left;
+		}
+
+		.valid{
+			/*nothing*/
+		}
+
+		.notvalid{
+			outline: 1px solid red;
+		}
+
+		#freakout{
+			outline: 2px solid red;
+		}
+
+		#happy{
+			outline: 2px solid green;
+		}
+
+		#freakout, #happy{
+			margin-top: 10px;
+			padding: 5px;
+			display: flex;
+			flex-direction: column;
+			width: 305px;
+		}
